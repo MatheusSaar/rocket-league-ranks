@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'confortaa';
+  src: url(../fonts/Comfortaa-Regular.ttf) format('truetype');
+}
+
+:root {
+  --skew-value: -10deg;
+}
+
+.rankbut {
+  font-family: 'confortaa';
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 250px;
+  height: 30px;
+  border-radius: 3px;
+
+  margin-top: 80px;
+  margin-left: 19px;
+  padding-top: 12px;
+  padding-left: 8px;
+  transform: skew(var(--skew-value));
+
+  /* Gradiente */
+  position: relative;
+  color: white;
+  background-image: radial-gradient(#2970a2, #215075);
+  z-index: 1;
+}
+
+.rankbut::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: radial-gradient(#c7f3ff, #e4f7ff);
+  transition: opacity 0.3s linear;
+  z-index: -1;
+  opacity: 0;
+}
+
+.rankbut:hover #button {
+  color: #215075;
+  transition: all 0.4s;
+}
+
+.rankbut:hover::before {
+  opacity: 1;
+  user-select: none;
+  cursor: pointer;
+}

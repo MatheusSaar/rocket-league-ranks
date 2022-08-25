@@ -1,0 +1,44 @@
+#reset {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+
+    /* Gradiente */
+    position: relative;
+    background-image: radial-gradient(#2970A2,#215075);
+    z-index: 1;
+}
+
+#reset::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    
+    background-image: radial-gradient(#C7F3FF,#E4F7FF);
+    transition: opacity 0.3s linear;
+    z-index: -1;
+    opacity: 0;
+}
+
+#reset:hover::before {
+    opacity: 1;
+}
+
+#reset img {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 32px;
+    height: 32px;
+}
+
+
